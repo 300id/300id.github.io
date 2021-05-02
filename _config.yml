@@ -23,14 +23,14 @@ sass:
 # Site Data
 url: # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: # the subpath of your site, e.g. /blog
-title: Simple Texture
+title: 300id's blog
 description: "A gem-based responsive simple texture styled Jekyll theme."
 keywords: 'jekyll,theme,gem-based,blog'
 author:
-  name:
-  job_title:
-  location:
-  email:
+  name: 300id
+  job_title: 
+  location: China
+  email: dyf935400544@gmail.com
   social_links:
     - name: facebook
       url:
