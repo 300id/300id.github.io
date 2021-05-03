@@ -8,7 +8,7 @@ tags: [教程]
 ---
 <div id="container"></div>
 <link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
-<script src="https://jjeejj.github.io/js/gitment.js"></script>
+<script src="https://www.wenjunjiang.win/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
 id: '', // 可选。默认为 location.href
