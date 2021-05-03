@@ -10,7 +10,8 @@ tags: [教程]
 <!-- Link Gitalk 的支持文件  -->
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
-<div id="gitalk-container"></div>     <script type="text/javascript">
+<div id="gitalk-container"></div>
+<script type="text/javascript">
     var gitalk = new Gitalk({
 
     // gitalk的主要参数
@@ -19,7 +20,7 @@ tags: [教程]
         repo: '300id.github.io',
         owner: '300id',
         admin: ['300id'],
-        id:window.location.pathname,
+        id:'2021-05-02-how-to-build-a-blog',
 
     });
     gitalk.render('gitalk-container');
