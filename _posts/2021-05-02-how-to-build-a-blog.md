@@ -9,7 +9,7 @@ tags: [教程]
 
 <!-- Link Gitalk 的支持文件  -->
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
 <div id="gitalk-container"></div>
 <script type="text/javascript">
     var gitalk = new Gitalk({
@@ -24,10 +24,10 @@ tags: [教程]
 
     });
     gitalk.render('gitalk-container');
-</script> 
+</script>
 <!-- Gitalk end -->
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<span id="busuanzi_container_site_uv"><br>
-  本文访客数<span id="busuanzi_value_site_uv"></span>人次
+<span id="busuanzi_container_site_pv"><br>
+  本文访客数<span id="busuanzi_value_site_pv"></span>人次
 </span>
