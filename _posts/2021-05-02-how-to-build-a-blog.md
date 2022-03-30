@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "如何搭建类似博主的blog"
+title: "这是一篇用来测试的空白文章"
 description: "The first post"
 categories: [教程]
 tags: [教程]
