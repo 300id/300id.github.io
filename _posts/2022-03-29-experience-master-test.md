@@ -36,7 +36,7 @@ p {text-indent:14px;}
 
 <a href="https://v6tnatqkfh.feishu.cn/drive/folder/fldcnpHHaVfPehRbyalpjC7Umic">OS：https://v6tnatqkfh.feishu.cn/drive/folder/fldcnpHHaVfPehRbyalpjC7Umic</a>
 
-<a href="https://pan.baidu.com/s/1HmU1_47hdXy3jl0nDT6ISg ">链接：https://pan.baidu.com/s/1HmU1_47hdXy3jl0nDT6ISg
+<a href="https://pan.baidu.com/s/1HmU1_47hdXy3jl0nDT6ISg ">整理的专业课集合链接：https://pan.baidu.com/s/1HmU1_47hdXy3jl0nDT6ISg
 提取码：ndd5 </a>
 
 
