@@ -146,10 +146,11 @@
     code.highlighter-rouge {
         margin: 0;
         padding: 4px;
-
+        
         white-space: nowrap;
 
         background-color: $color-inline-code-background;
+
     }
 
     pre {
@@ -159,6 +160,8 @@
 
         code {
             white-space: pre;
+            
+            font-size: 1.5em;
         }
 
         table {
