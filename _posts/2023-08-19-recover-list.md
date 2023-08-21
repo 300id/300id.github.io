@@ -19,17 +19,16 @@ tags: [题单]
     |---
     | 题目 | 题解 | 完成 | 备注
     |-|:-|:-:|-:
-    |[P1421 小玉买文具](https://www.luogu.com.cn/problem/P1421)
-    |[P1909 买铅笔](https://www.luogu.com.cn/problem/P1909)
-    |[P1089 津津的储蓄计划](https://www.luogu.com.cn/problem/P1089)
-    |[P1085 不高兴的津津](https://www.luogu.com.cn/problem/P1085)
-    |[P1035 级数求和](https://www.luogu.com.cn/problem/P1035)
-    |[P1980 计数问题](https://www.luogu.com.cn/problem/P1980)
-    |[P1014 Cantor表](https://www.luogu.com.cn/problem/P1014)
-    |[P1307 数字反转](https://www.luogu.com.cn/problem/P1307)
+    |[P1421 小玉买文具](https://www.luogu.com.cn/problem/P1421)|[传送门]({% post_url 2023-08-20-scratch %})|√|
+    |[P1909 买铅笔](https://www.luogu.com.cn/problem/P1909)            
+    |[P1089 津津的储蓄计划](https://www.luogu.com.cn/problem/P1089)            
+    |[P1085 不高兴的津津](https://www.luogu.com.cn/problem/P1085)            
+    |[P1035 级数求和](https://www.luogu.com.cn/problem/P1035)            
+    |[P1980 计数问题](https://www.luogu.com.cn/problem/P1980)            
+    |[P1014 Cantor表](https://www.luogu.com.cn/problem/P1014)            
+    |[P1307 数字反转](https://www.luogu.com.cn/problem/P1307)            
 
     <a href="#" class="internal back-to-top">{{ site.data.i18n[site.lang].back_to_top }}</a>
-
 
 ## Part 1.2 数组基础
 

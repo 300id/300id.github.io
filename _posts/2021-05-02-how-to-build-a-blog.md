@@ -122,35 +122,40 @@ Here comes an image!
 
 ## Code highlight
 
-{% highlight cpp %}
-#include <bits/stdc++.h>
-#define endl '\n'
-#define ll long long
-#define PB push_back
-#define POP pop_back
-#define INF 0x3f3f3f3f
-using namespace std;
-const int maxn = 1e5 + 10;
-int n;
-string s;
-map<string, int> m;
-int main(){			
 
-  cin >> n;
-    int x = 0, ans = 0;
-    while(n --){
-        cin >> s;
-        m[s] += 1;
-        if(m[s] == x + 1){
-            ans ++;
-            x ++;
+<details> 
+    <summary>展开代码</summary>
+    {% highlight cpp %}
+    #include <bits/stdc++.h>
+    #define endl '\n'
+    #define ll long long
+    #define PB push_back
+    #define POP pop_back
+    #define INF 0x3f3f3f3f
+    using namespace std;
+    const int maxn = 1e5 + 10;
+    int n;
+    string s;
+    map<string, int> m;
+    int main(){			
+
+    cin >> n;
+        int x = 0, ans = 0;
+        while(n --){
+            cin >> s;
+            m[s] += 1;
+            if(m[s] == x + 1){
+                ans ++;
+                x ++;
+            }
         }
+        cout << ans;
+        system("pause");
+        return 0;
     }
-    cout << ans;
-    system("pause");
-    return 0;
-}
-{% endhighlight %}
+    {% endhighlight %}
+</details>
+
 
 [^1]: This is a footnote.
 
