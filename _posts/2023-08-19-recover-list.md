@@ -56,9 +56,9 @@ tags: [题单]
     |[P5015 标题统计](https://www.luogu.com.cn/problem/P5015)|[传送门]({% post_url 2023-08-20-scratch %})|√|
     |[P1055 ISBN号码](https://www.luogu.com.cn/problem/P1055)|[传送门]({% post_url 2023-08-20-scratch %})|√|
     |[P1308 统计单词数](https://www.luogu.com.cn/problem/P1308)|[传送门]({% post_url 2023-08-20-scratch %})|√|
-    |[P2010 回文日期](https://www.luogu.com.cn/problem/P2010)
-    |[P1012 拼数](https://www.luogu.com.cn/problem/P1012)
-    |[P5587 打字练习](https://www.luogu.com.cn/problem/P5587)
+    |[P2010 回文日期](https://www.luogu.com.cn/problem/P2010)|[传送门]({% post_url 2023-08-20-scratch %})|√|
+    |[P1012 拼数](https://www.luogu.com.cn/problem/P1012)|[传送门]({% post_url 2023-08-20-scratch %})|√|
+    |[P5587 打字练习](https://www.luogu.com.cn/problem/P5587)|[传送门]({% post_url 2023-08-20-scratch %})|√|
 
     <a href="#" class="internal back-to-top">{{ site.data.i18n[site.lang].back_to_top }}</a>
     
