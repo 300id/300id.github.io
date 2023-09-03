@@ -70,13 +70,13 @@ tags: [题单]
     |---
     | 题目 | 题解 | 完成 | 备注
     |-|:-|:-:|-:
-    |[P1028 数的计算](https://www.luogu.com.cn/problem/P1028)
-    |[P1036 选数](https://www.luogu.com.cn/problem/P1036)
-    |[P1464 Function](https://www.luogu.com.cn/problem/P1464)
-    |[P5534 【XR-3】等差数列](https://www.luogu.com.cn/problem/P5534)
-    |[P1192 台阶问题](https://www.luogu.com.cn/problem/P1192)
-    |[P1025 数的划分](https://www.luogu.com.cn/problem/P1025)
-    |[P4994 终于结束的起点](https://www.luogu.com.cn/problem/P4994)
+    |[P1028 数的计算](https://www.luogu.com.cn/problem/P1028)|[传送门]({% post_url 2023-08-20-scratch %})|√|
+    |[P1036 选数](https://www.luogu.com.cn/problem/P1036)|[传送门]({% post_url 2023-08-20-scratch %})|√|
+    |[P1464 Function](https://www.luogu.com.cn/problem/P1464)|[传送门]({% post_url 2023-08-20-scratch %})|√|
+    |[P5534 【XR-3】等差数列](https://www.luogu.com.cn/problem/P5534)|[传送门]({% post_url 2023-08-20-scratch %})|√|
+    |[P1192 台阶问题](https://www.luogu.com.cn/problem/P1192)|[传送门]({% post_url 2023-08-20-scratch %})|√|
+    |[P1025 数的划分](https://www.luogu.com.cn/problem/P1025)|[传送门]({% post_url 2023-08-20-scratch %})|√|强化版的dp写法有点意思
+    |[P4994 终于结束的起点](https://www.luogu.com.cn/problem/P4994)|[传送门]({% post_url 2023-08-20-scratch %})|√|
 
     <a href="#" class="internal back-to-top">{{ site.data.i18n[site.lang].back_to_top }}</a>
 
