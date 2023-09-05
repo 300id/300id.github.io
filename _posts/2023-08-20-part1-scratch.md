@@ -36,7 +36,6 @@ tags: [题解]
         return 0;
     }
     {% endhighlight %}
-    </p>
 </details>
 
 ### P1909 买铅笔

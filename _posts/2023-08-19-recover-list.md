@@ -19,14 +19,14 @@ tags: [题单]
     |---
     | 题目 | 题解 | 完成 | 备注
     |-|:-|:-:|:-:
-    |[P1421 小玉买文具](https://www.luogu.com.cn/problem/P1421)|[传送门]({% post_url 2023-08-20-scratch %})|√|
-    |[P1909 买铅笔](https://www.luogu.com.cn/problem/P1909)|[传送门]({% post_url 2023-08-20-scratch %})|√|            
-    |[P1089 津津的储蓄计划](https://www.luogu.com.cn/problem/P1089)|[传送门]({% post_url 2023-08-20-scratch %})|√|            
-    |[P1085 不高兴的津津](https://www.luogu.com.cn/problem/P1085)|[传送门]({% post_url 2023-08-20-scratch %})|√|            
-    |[P1035 级数求和](https://www.luogu.com.cn/problem/P1035)|[传送门]({% post_url 2023-08-20-scratch %})|√|            
-    |[P1980 计数问题](https://www.luogu.com.cn/problem/P1980)|[传送门]({% post_url 2023-08-20-scratch %})|√|考虑到可以扩展至数位dp     
-    |[P1014 Cantor表](https://www.luogu.com.cn/problem/P1014)|[传送门]({% post_url 2023-08-20-scratch %})|√|            
-    |[P1307 数字反转](https://www.luogu.com.cn/problem/P1307)|[传送门]({% post_url 2023-08-20-scratch %})|√|            
+    |[P1421 小玉买文具](https://www.luogu.com.cn/problem/P1421)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|
+    |[P1909 买铅笔](https://www.luogu.com.cn/problem/P1909)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|            
+    |[P1089 津津的储蓄计划](https://www.luogu.com.cn/problem/P1089)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|            
+    |[P1085 不高兴的津津](https://www.luogu.com.cn/problem/P1085)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|            
+    |[P1035 级数求和](https://www.luogu.com.cn/problem/P1035)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|            
+    |[P1980 计数问题](https://www.luogu.com.cn/problem/P1980)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|考虑到可以扩展至数位dp     
+    |[P1014 Cantor表](https://www.luogu.com.cn/problem/P1014)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|            
+    |[P1307 数字反转](https://www.luogu.com.cn/problem/P1307)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|            
 
     <a href="#" class="internal back-to-top">{{ site.data.i18n[site.lang].back_to_top }}</a>
 
@@ -37,11 +37,11 @@ tags: [题单]
     |---
     | 题目 | 题解 | 完成 | 备注
     |-|:-|:-:|-:
-    |[P1046 陶陶摘苹果](https://www.luogu.com.cn/problem/P1046)|[传送门]({% post_url 2023-08-20-scratch %})|√|     
-    |[P1047 校门外的树](https://www.luogu.com.cn/problem/P1047)|[传送门]({% post_url 2023-08-20-scratch %})|√|     
-    |[P1427 小鱼的数字游戏](https://www.luogu.com.cn/problem/P1427)|[传送门]({% post_url 2023-08-20-scratch %})|√|     
-    |[P2141 珠心算测验](https://www.luogu.com.cn/problem/P2141)|[传送门]({% post_url 2023-08-20-scratch %})|√|     
-    |[P5594 【XR-4】模拟赛](https://www.luogu.com.cn/problem/P5594)|[传送门]({% post_url 2023-08-20-scratch %})|√|     
+    |[P1046 陶陶摘苹果](https://www.luogu.com.cn/problem/P1046)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|     
+    |[P1047 校门外的树](https://www.luogu.com.cn/problem/P1047)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|     
+    |[P1427 小鱼的数字游戏](https://www.luogu.com.cn/problem/P1427)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|     
+    |[P2141 珠心算测验](https://www.luogu.com.cn/problem/P2141)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|     
+    |[P5594 【XR-4】模拟赛](https://www.luogu.com.cn/problem/P5594)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|     
     
     <a href="#" class="internal back-to-top">{{ site.data.i18n[site.lang].back_to_top }}</a>
 
@@ -53,12 +53,12 @@ tags: [题单]
     |---
     | 题目 | 题解 | 完成 | 备注
     |-|:-|:-:|:-:
-    |[P5015 标题统计](https://www.luogu.com.cn/problem/P5015)|[传送门]({% post_url 2023-08-20-scratch %})|√|
-    |[P1055 ISBN号码](https://www.luogu.com.cn/problem/P1055)|[传送门]({% post_url 2023-08-20-scratch %})|√|
-    |[P1308 统计单词数](https://www.luogu.com.cn/problem/P1308)|[传送门]({% post_url 2023-08-20-scratch %})|√|
-    |[P2010 回文日期](https://www.luogu.com.cn/problem/P2010)|[传送门]({% post_url 2023-08-20-scratch %})|√|
-    |[P1012 拼数](https://www.luogu.com.cn/problem/P1012)|[传送门]({% post_url 2023-08-20-scratch %})|√|
-    |[P5587 打字练习](https://www.luogu.com.cn/problem/P5587)|[传送门]({% post_url 2023-08-20-scratch %})|√|
+    |[P5015 标题统计](https://www.luogu.com.cn/problem/P5015)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|
+    |[P1055 ISBN号码](https://www.luogu.com.cn/problem/P1055)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|
+    |[P1308 统计单词数](https://www.luogu.com.cn/problem/P1308)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|
+    |[P2010 回文日期](https://www.luogu.com.cn/problem/P2010)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|
+    |[P1012 拼数](https://www.luogu.com.cn/problem/P1012)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|
+    |[P5587 打字练习](https://www.luogu.com.cn/problem/P5587)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|
 
     <a href="#" class="internal back-to-top">{{ site.data.i18n[site.lang].back_to_top }}</a>
     
@@ -70,13 +70,13 @@ tags: [题单]
     |---
     | 题目 | 题解 | 完成 | 备注
     |-|:-|:-:|-:
-    |[P1028 数的计算](https://www.luogu.com.cn/problem/P1028)|[传送门]({% post_url 2023-08-20-scratch %})|√|
-    |[P1036 选数](https://www.luogu.com.cn/problem/P1036)|[传送门]({% post_url 2023-08-20-scratch %})|√|
-    |[P1464 Function](https://www.luogu.com.cn/problem/P1464)|[传送门]({% post_url 2023-08-20-scratch %})|√|
-    |[P5534 【XR-3】等差数列](https://www.luogu.com.cn/problem/P5534)|[传送门]({% post_url 2023-08-20-scratch %})|√|
-    |[P1192 台阶问题](https://www.luogu.com.cn/problem/P1192)|[传送门]({% post_url 2023-08-20-scratch %})|√|
-    |[P1025 数的划分](https://www.luogu.com.cn/problem/P1025)|[传送门]({% post_url 2023-08-20-scratch %})|√|强化版的dp写法有点意思
-    |[P4994 终于结束的起点](https://www.luogu.com.cn/problem/P4994)|[传送门]({% post_url 2023-08-20-scratch %})|√|
+    |[P1028 数的计算](https://www.luogu.com.cn/problem/P1028)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|
+    |[P1036 选数](https://www.luogu.com.cn/problem/P1036)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|
+    |[P1464 Function](https://www.luogu.com.cn/problem/P1464)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|
+    |[P5534 【XR-3】等差数列](https://www.luogu.com.cn/problem/P5534)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|
+    |[P1192 台阶问题](https://www.luogu.com.cn/problem/P1192)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|
+    |[P1025 数的划分](https://www.luogu.com.cn/problem/P1025)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|强化版的dp写法有点意思
+    |[P4994 终于结束的起点](https://www.luogu.com.cn/problem/P4994)|[传送门]({% post_url 2023-08-20-part1-scratch %})|√|
 
     <a href="#" class="internal back-to-top">{{ site.data.i18n[site.lang].back_to_top }}</a>
 
