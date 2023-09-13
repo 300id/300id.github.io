@@ -228,6 +228,234 @@ tags: [题解]
     {% endhighlight %}
 </details>
 
+### P1179 数字统计
+[和P1980 计数问题解法相同]({% post_url 2023-08-20-part1-scratch %} #p1980-计数问题)
+<details> 
+    <summary>展开代码</summary>
+    {% highlight cpp %}
+    #include <bits/stdc++.h>
+    #define endl '\n'
+    #define ll long long
+    #define PB push_back
+    #define POP pop_back
+    #define INF 0x3f3f3f3f
+    using namespace std;
+    const int maxn = 2e5 + 10;
+    int l, r;
+    int cal(int n, int x){
+        if(n <= 1) return 0;
+        int t = 1, ans = 0;
+        while(t <= n){
+            int a = n / (t * 10);
+            int b = n / t % 10;
+            int c = n % t;
+            
+            if(b < x) ans += a * t;
+            if(b == x) ans += a * t + c + 1;
+            if(b > x) ans += (a + 1) * t;
+            
+            t *= 10;
+        }
+        return ans;
+    }
+    int main(){ 
+        cin >> l >> r;
+        cout << cal(r, 2) - cal(l-1, 2);
+        system("pause");
+        return 0;   
+    }
+    {% endhighlight %}
+</details>
+
+### P2615 神奇的幻方
+纯模拟没啥说的
+<details> 
+    <summary>展开代码</summary>
+    {% highlight cpp %}
+    #include <bits/stdc++.h>
+    #define endl '\n'
+    #define ll long long
+    #define PB push_back
+    #define POP pop_back
+    #define INF 0x3f3f3f3f
+    using namespace std;
+    const int maxn = 2e5 + 10;
+    int x[5000], y[5000], p[500][500];
+    int n;
+    int main(){ 
+        cin >> n;
+        x[1] = 1; y[1] = (1 + n) / 2; p[1][(1+n)/2] = 1;
+        for(int i = 2 ; i <= n * n ; ++ i){
+            if(x[i-1] == 1 && y[i-1] != n) x[i] = n, y[i] = y[i-1] + 1;
+            if(x[i-1] != 1 && y[i-1] == n) x[i] = x[i-1] - 1, y[i] = 1;
+            if(x[i-1] == 1 && y[i-1] == n) x[i] = x[i-1] + 1, y[i] = y[i-1];
+            if(x[i-1] != 1 && y[i-1] != n){
+                if(p[x[i-1]-1][y[i-1]+1] == 0) x[i] = x[i-1] - 1, y[i] = y[i-1] + 1;
+                else x[i] = x[i-1] + 1, y[i] = y[i-1];
+            }
+            p[x[i]][y[i]] = i;
+        }
+        for(int i = 1 ; i <= n ; ++ i){
+            for(int j = 1 ; j <= n ; ++ j){
+                printf("%d%c", p[i][j], j==n?'\n':' ');
+            }
+        }
+        system("pause");
+        return 0;   
+    }
+    {% endhighlight %}
+</details>
+
+## Part 2.2 排序算法
+### P1177 【模板】快速排序
+第一种随机选[L, R]区间一个点作为基数排序。这种得特判所有数字都一样的数组，不然会T。
+第二种写法三路快排。
+
+<details> 
+    <summary>普通快排</summary>
+    {% highlight cpp %}
+    #include <bits/stdc++.h>
+    #define endl '\n'
+    #define ll long long
+    #define PB push_back
+    #define POP pop_back
+    #define INF 0x3f3f3f3f
+    using namespace std;
+    const int maxn = 2e5 + 10;
+    int n;
+    int a[maxn];
+    inline int random(int l, int r){
+        return (rand() % (r - l + 1)) + l;
+    }
+    inline void qsort(int L, int R){
+        if(L >= R) return;
+        int l = L, r = R;
+        int mid = random(l, r), base = a[mid];
+        swap(a[L], a[mid]);
+        while(l < r){
+            while(l < r && a[r] >= base) r --;
+            while(l < r && a[l] <= base) l ++;
+            if(l < r) swap(a[l], a[r]);
+        }
+        a[L] = a[l];
+        a[l] = base;
+        qsort(L, l - 1);
+        qsort(l + 1, R);
+    }
+    int main(){ 
+        srand(time(0));
+        cin >> n;
+        int f = 0;
+        for(register int i = 1 ; i <= n ; ++ i){
+            scanf("%d", &a[i]);
+            if(i>=2 && a[i]!=a[i-1]) f = 1;
+        }
+        if(f) qsort(1, n);
+        for(register int i = 1 ; i <= n ; ++ i) printf("%d%c", a[i], i==n?'\n':' ');
+        system("pause");
+        return 0;   
+    }
+    {% endhighlight %}
+</details>
+
+三路快排其实就是先随机挑选一个值V，然后把原始数组排成三块，一块是小于V，一块是等于V，一块是大于V。
+
+我们分三种情况进行讨论三路快排的过程。
+
+
+<a class="post-image" href="{{site.url}}/images/三路快排1.png" >
+<img itemprop="image" data-src="{{site.url}}/images/三路快排1.png" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
+</a>
+
+i: 遍历的当前索引位置
+
+cur: 索引i所对应的值
+
+L: 数组的最左端
+
+R: 数组的最右端
+
+V: 最开始在区间[L, R]随机挑选的基准值
+
+sm: 数组中已经排好序的**小于**V区间的最后一个元素的索引
+
+lg: 数组中已经排好序的**大于**V区间的第一个元素的索引
+
+**第一种情况**
+
+当前处理的元素cur = V，元素 e 直接纳入深蓝色区间，同时i向后移一位。
+<a class="post-image" href="{{site.url}}/images/三路快排2.png" >
+<img itemprop="image" data-src="{{site.url}}/images/三路快排2.png" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
+</a>
+
+**第二种情况**
+
+当前处理元素cur < V，cur和等于 V 区间(深蓝色)的第一个位置进行交换，同时索引 sm 和 i 都向后移动一位
+<a class="post-image" href="{{site.url}}/images/三路快排3.png" >
+<img itemprop="image" data-src="{{site.url}}/images/三路快排3.png" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
+</a>
+
+**第三种情况**
+
+当前处理元素cur > V，cur 和 lg-1 索引位置(也就是大于V区间最左端的前一个位置)的数值进行交换，同时 lg 索引向前移动一位。
+<a class="post-image" href="{{site.url}}/images/三路快排4.png" >
+<img itemprop="image" data-src="{{site.url}}/images/三路快排4.png" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
+</a>
+
+最后当 i = lg 时，结束遍历，同时需要把 V 和索引 sm 指向的数值进行交换，这样这个排序过程就完成了，然后对 < V 和 > V 的数组部分用同样的方法再进行递归排序。
+
+<details>  
+    <summary>三路快排</summary>
+    {% highlight cpp %}
+    #include <bits/stdc++.h>
+    #define endl '\n'
+    #define ll long long
+    #define PB push_back
+    #define POP pop_back
+    #define INF 0x3f3f3f3f
+    using namespace std;
+    const int maxn = 2e5 + 10;
+    int n;
+    int a[maxn];
+    inline int random(int l, int r){
+        return (rand() % (r - l + 1)) + l;
+    }
+    inline void qsort(int L, int R){
+        if(L >= R) return;
+        int l = L, r = R;
+        swap(a[L], a[random(L, R)]);
+        int sm = L, lg = R + 1, cur = L + 1, v = a[L];
+        while(cur < lg){
+            if(a[cur] < v){
+                swap(a[sm + 1], a[cur]);
+                cur ++;
+                sm ++;
+            }
+            else if(a[cur] > v){
+                swap(a[lg - 1], a[cur]);
+                lg --;
+            }
+            else if(a[cur] == v) cur ++;
+            
+        }
+        swap(a[sm], a[L]);
+        qsort(L, sm - 1);
+        qsort(lg, R);
+    }
+    int main(){ 
+        srand(time(0));
+        cin >> n;
+        for(register int i = 1 ; i <= n ; ++ i){
+            scanf("%d", &a[i]);
+        }
+        qsort(1, n);
+        for(register int i = 1 ; i <= n ; ++ i) printf("%d%c", a[i], i==n?'\n':' ');
+        system("pause");
+        return 0;   
+    }
+    {% endhighlight %}
+</details>
+
 [^1]: This is a footnote.
 
 [kramdown]: https://kramdown.gettalong.org/
