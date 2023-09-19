@@ -1887,7 +1887,7 @@ tags: [题单]
         repo: '300id.github.io',
         owner: '300id',
         admin: ['300id'],
-        id:'2022-03-29-experience-master-test',
+        id:'2023-08-19-recover-list',
 
     });
     gitalk.render('gitalk-container');

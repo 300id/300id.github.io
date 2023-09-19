@@ -456,6 +456,148 @@ lg: 数组中已经排好序的**大于**V区间的第一个元素的索引
     {% endhighlight %}
 </details>
 
+### P1059 明明的随机数
+STL unique了解一下
+<details> 
+    <summary>展开代码</summary>
+    {% highlight cpp %}
+	#include <bits/stdc++.h>
+	#define endl '\n'
+	#define ll long long
+	#define PB push_back
+	#define POP pop_back
+	#define INF 0x3f3f3f3f
+	using namespace std;
+	const int maxn = 2e5 + 10;
+	const int mod = 1e9 + 7;
+	int n;
+	int a[maxn];
+	int main(){
+		cin >> n;
+		for(int i = 1 ; i <= n ; ++ i) scanf("%d", &a[i]);
+		sort(a + 1, a + 1 + n);
+		int m = unique(a + 1, a + 1 + n) - a - 1;
+		cout << m << endl;
+		for(int i = 1 ; i <= m ; ++ i) printf("%d%c", a[i], i == m ? '\n' : ' ');
+		system("pause");
+		return 0;   
+	}
+    {% endhighlight %}
+</details>
+
+### P1059 明明的随机数
+STL unique了解一下
+<details> 
+    <summary>展开代码</summary>
+    {% highlight cpp %}
+	#include <bits/stdc++.h>
+	#define endl '\n'
+	#define ll long long
+	#define PB push_back
+	#define POP pop_back
+	#define INF 0x3f3f3f3f
+	using namespace std;
+	const int maxn = 2e5 + 10;
+	const int mod = 1e9 + 7;
+	int n;
+	int a[maxn];
+	int main(){
+		cin >> n;
+		for(int i = 1 ; i <= n ; ++ i) scanf("%d", &a[i]);
+		sort(a + 1, a + 1 + n);
+		int m = unique(a + 1, a + 1 + n) - a - 1;
+		cout << m << endl;
+		for(int i = 1 ; i <= m ; ++ i) printf("%d%c", a[i], i == m ? '\n' : ' ');
+		system("pause");
+		return 0;   
+	}
+    {% endhighlight %}
+</details>
+
+### P1068 分数线划定
+结构体排序
+<details> 
+    <summary>展开代码</summary>
+    {% highlight cpp %}
+	#include <bits/stdc++.h>
+	#define endl '\n'
+	#define ll long long
+	#define PB push_back
+	#define POP pop_back
+	#define INF 0x3f3f3f3f
+	using namespace std;
+	const int maxn = 2e5 + 10;
+	const int mod = 1e9 + 7;
+	int n, m;
+	unordered_map<int, int> mp;
+	struct node{
+		int id, mark;
+		friend bool operator < (node a, node b){
+			return a.mark == b.mark ? a.id < b.id : a.mark > b.mark;
+		}
+	}a[maxn];
+	int main(){
+
+		cin >> n >> m;
+		for(int i = 1 ; i <= n ; ++ i) scanf("%d %d", &a[i].id, &a[i].mark);
+		sort(a + 1, a + 1 + n);
+		int k = int(m * 1.5);
+		int p = n;
+		while(a[p].mark < a[k].mark) p --;
+		cout << a[p].mark << ' ' << p << endl;
+		for(int i = 1 ; i <= p ; ++ i) cout << a[i].id << ' ' << a[i].mark << endl;
+		system("pause");
+		return 0;   
+	}
+    {% endhighlight %}
+</details>
+
+### P1051 谁拿了最多奖学金
+结构体排序
+<details> 
+    <summary>展开代码</summary>
+    {% highlight cpp %}
+	#include <bits/stdc++.h>
+	#define endl '\n'
+	#define ll long long
+	#define PB push_back
+	#define POP pop_back
+	#define INF 0x3f3f3f3f
+	using namespace std;
+	const int maxn = 2e5 + 10;
+	const int mod = 1e9 + 7;
+	struct node{
+		string name;
+		int fen;
+		int id;
+		friend bool operator < (node a, node b){
+			return a.fen == b.fen ? a.id < b.id : a.fen > b.fen;
+		}
+	}s[105];
+	int n, num, mo, ban, sum;
+	char a, b;
+	int main(){
+		scanf("%d", &n);
+		for(int i = 1 ; i <= n ; ++ i){
+			cin >> s[i].name >> mo >> ban >> a >> b >> num;
+			if(mo > 80 && num >= 1) s[i].fen += 8000;
+			if(mo > 85 && ban > 80) s[i].fen += 4000;
+			if(mo > 90) s[i].fen += 2000;
+			if(mo > 85 && b == 'Y') s[i].fen += 1000;
+			if(ban > 80 && a == 'Y') s[i].fen += 850;
+			s[i].id = i;
+			sum += s[i].fen;
+		}
+		sort(s + 1, s + 1 + n);
+		cout << s[1].name << endl;
+		cout << s[1].fen << endl;
+		cout << sum << endl;
+		system("pause");
+		return 0;   
+	}
+    {% endhighlight %}
+</details>
+
 [^1]: This is a footnote.
 
 [kramdown]: https://kramdown.gettalong.org/
@@ -474,7 +616,7 @@ lg: 数组中已经排好序的**大于**V区间的第一个元素的索引
         repo: '300id.github.io',
         owner: '300id',
         admin: ['300id'],
-        id:'2021-05-02-how-to-build-a-blog',
+        id:'2023-08-20-part2-basic-algorithm',
 
     });
     gitalk.render('gitalk-container');
