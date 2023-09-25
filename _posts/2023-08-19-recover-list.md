@@ -109,12 +109,12 @@ tags: [题单]
     |---
     | 题目 | 题解 | 完成 | 备注
     |-|:-|:-:|-:
-    |[P1177 【模板】快速排序](https://www.luogu.com.cn/problem/P1177)
-    |[P1059 明明的随机数](https://www.luogu.com.cn/problem/P1059)
-    |[P1068 分数线划定](https://www.luogu.com.cn/problem/P1068)
-    |[P1051 谁拿了最多奖学金](https://www.luogu.com.cn/problem/P1051)
-    |[P1309 瑞士轮](https://www.luogu.com.cn/problem/P1309)
-    |[P1908 逆序对](https://www.luogu.com.cn/problem/P1908)
+    |[P1177 【模板】快速排序](https://www.luogu.com.cn/problem/P1177)|[传送门]({% post_url 2023-08-20-part2-basic-algorithm %} #p1177-模板快速排序)|√|三路快排怎么写注意一下
+    |[P1059 明明的随机数](https://www.luogu.com.cn/problem/P1059)|[传送门]({% post_url 2023-08-20-part2-basic-algorithm %} #p1059-明明的随机数)|√|
+    |[P1068 分数线划定](https://www.luogu.com.cn/problem/P1068)|[传送门]({% post_url 2023-08-20-part2-basic-algorithm %} #p1068-分数线划定)|√|
+    |[P1051 谁拿了最多奖学金](https://www.luogu.com.cn/problem/P1051)|[传送门]({% post_url 2023-08-20-part2-basic-algorithm %} #p1051-谁拿了最多奖学金)|√|
+    |[P1309 瑞士轮](https://www.luogu.com.cn/problem/P1309)|[传送门]({% post_url 2023-08-20-part2-basic-algorithm %} #p1309-瑞士轮)|√|注意直接sort会t
+    |[P1908 逆序对](https://www.luogu.com.cn/problem/P1908)|[传送门]({% post_url 2023-08-20-part2-basic-algorithm %} #p1908-逆序对)|√|树状数组的写法
 
     <a href="#" class="internal back-to-top">{{ site.data.i18n[site.lang].back_to_top }}</a>
 

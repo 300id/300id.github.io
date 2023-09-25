@@ -485,35 +485,6 @@ STL unique了解一下
     {% endhighlight %}
 </details>
 
-### P1059 明明的随机数
-STL unique了解一下
-<details> 
-    <summary>展开代码</summary>
-    {% highlight cpp %}
-	#include <bits/stdc++.h>
-	#define endl '\n'
-	#define ll long long
-	#define PB push_back
-	#define POP pop_back
-	#define INF 0x3f3f3f3f
-	using namespace std;
-	const int maxn = 2e5 + 10;
-	const int mod = 1e9 + 7;
-	int n;
-	int a[maxn];
-	int main(){
-		cin >> n;
-		for(int i = 1 ; i <= n ; ++ i) scanf("%d", &a[i]);
-		sort(a + 1, a + 1 + n);
-		int m = unique(a + 1, a + 1 + n) - a - 1;
-		cout << m << endl;
-		for(int i = 1 ; i <= m ; ++ i) printf("%d%c", a[i], i == m ? '\n' : ' ');
-		system("pause");
-		return 0;   
-	}
-    {% endhighlight %}
-</details>
-
 ### P1068 分数线划定
 结构体排序
 <details> 
@@ -595,6 +566,144 @@ STL unique了解一下
 		system("pause");
 		return 0;   
 	}
+    {% endhighlight %}
+</details>
+
+### P1309 瑞士轮
+这题直接sort会t(开了O2可以过)。如果每次把赢的人分成一组，输的人分成一组来看，这两组组内都是有序的，那么对于两个有序数组的合并不难想到可以用归并。
+<details> 
+    <summary>展开代码</summary>
+    {% highlight cpp %}
+	#include <bits/stdc++.h>
+	#define endl '\n'
+	#define ll long long
+	#define PB push_back
+	#define POP pop_back
+	#define INF 0x3f3f3f3f
+	using namespace std;
+	const int maxn = 2e5 + 10;
+	const int mod = 1e9 + 7;
+	int n, r, q;
+	struct node{
+		int v, s, id;
+		friend bool operator < (node a, node b){
+			return a.s == b.s ? a.id < b.id : a.s > b.s;
+		}
+	}a[maxn], b[maxn], c[maxn];
+	int main(){
+		cin >> n >> r >> q;
+		for(int i = 1 ; i <= n * 2 ; ++ i) scanf("%d", &a[i].s), a[i].id = i;
+		for(int i = 1 ; i <= n * 2 ; ++ i) scanf("%d", &a[i].v);
+		sort(a + 1, a + 1 + n * 2);
+		while(r --){
+			for(int i = 1 ; i <= n ; i ++){
+				if(a[i*2-1].v > a[i*2].v){
+					a[i*2-1].s ++;
+					b[i] = a[i*2-1];
+					c[i] = a[i*2];
+				}
+				else{
+					a[i*2].s ++;
+					b[i] = a[i*2];
+					c[i] = a[i*2-1];
+				}
+			}
+			merge(b + 1, b + 1 + n, c + 1, c + 1 + n, a + 1);
+		}
+		cout << a[q].id;
+		system("pause");
+		return 0;   
+	}
+    {% endhighlight %}
+</details>
+
+### P1908 逆序对
+
+解法一：这题应使用归并排序，至于如何算贡献请看下面：
+首先归并其实是把两个有序数组不断合并，并且保证待合并的两部分都是组内有序的。那么在合并的过程中，如果下一个要填的数字是右边那组的，说明左边那组的当前位置到最后一个都要比右边那组的待填数字大，因而贡献即可求出。
+
+<details> 
+    <summary>展开代码</summary>
+    {% highlight cpp %}
+    #include <bits/stdc++.h>
+    #define endl '\n'
+    #define ll long long
+    #define PB push_back
+    #define POP pop_back
+    #define INF 0x3f3f3f3f
+    using namespace std;
+    const int maxn = 5e5 + 10;
+    const int mod = 1e9 + 7;
+    int a[maxn], b[maxn];
+    int n; ll ans;
+    void msort(int l, int r){
+        if(l >= r) return;
+        int mid = (l + r) >> 1, i = l, j = mid + 1, t = l;
+        msort(l, mid);
+        msort(mid + 1, r);
+        while(i <= mid && j <= r){
+            if(a[i] <= a[j]) b[t++] = a[i++];
+            else b[t++] = a[j++], ans += mid - i + 1;
+        }
+        while(i <= mid) b[t++] = a[i++];
+        while(j <= r) b[t++] = a[j++];
+        for(int i = l ; i <= r ; ++ i) a[i] = b[i];
+        return;
+    }
+    int main(){
+        cin >> n;
+        for(int i = 1 ; i <= n ; ++ i){
+            scanf("%d", &a[i]);
+        }
+        msort(1, n);
+        // for(int i = 1 ; i <= n ; ++ i) printf("%d%c",a[i], i == n ? '\n':' ');
+        cout << ans << endl;
+        system("pause");
+        return 0;   
+    }
+    {% endhighlight %}
+</details>
+
+解法二：考虑树状数组。对于某一点i，我们只需要查询当前数组内比这个点大的有几个即可。那么其实就是i - 小于等于i的个数。
+
+<details> 
+    <summary>展开代码</summary>
+    {% highlight cpp %}
+    #include <bits/stdc++.h>
+    #define endl '\n'
+    #define ll long long
+    #define PB push_back
+    #define POP pop_back
+    #define lowbit(i) (i&(-i))
+    #define INF 0x3f3f3f3f
+    using namespace std;
+    const int maxn = 5e5 + 10;
+    const int mod = 1e9 + 7;
+    int n;
+    int a[maxn], b[maxn], c[maxn];
+    void update(int x){
+        for(int i = x ; i <= n ; i += lowbit(i)) c[i] ++;
+    }
+    ll query(int x){ 
+        ll ans = 0;
+        for(int i = x ; i > 0 ; i -= lowbit(i)) ans += c[i];
+        return ans;
+    }
+    int main(){
+        scanf("%d", &n);
+        for(int i = 1 ; i <= n ; ++ i) scanf("%d", &a[i]), b[i] = a[i];
+        sort(a + 1, a + 1 + n);
+        int m = unique(a + 1, a + 1 + n) - a - 1;
+        ll ans = 0;
+        for(int i = 1 ; i <= n ; ++ i){
+            int t = lower_bound(a + 1, a + 1 + m, b[i]) - a;
+            update(t);
+            ans += i - query(t);
+        }
+        cout << ans;
+        system("pause");
+        return 0;
+    }
     {% endhighlight %}
 </details>
 
