@@ -58,8 +58,8 @@ tags: [latex, vscode]
 1. 点击拓展图标，打开拓展；输入"latex workshop"，选择第一个LaTeX Workshop插件；点击"install"进行安装，等待安装完成；
 
 2. 如图点击设置图标, 点击设置, 打开设置json文件。
-<a class="post-image" href="{{site.url}}/images/2023-10-12-latex-on-vscode/8.png">
-<img itemprop="image" data-src="{{site.url}}/images/2023-10-12-latex-on-vscode/8.png" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
+<a class="post-image" href="{{site.url}}/images/2023-10-12-latex-on-vscode/8.jpg">
+<img itemprop="image" data-src="{{site.url}}/images/2023-10-12-latex-on-vscode/8.jpg" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
 </a>
 
 3. 按照如下配置json文件
@@ -229,8 +229,8 @@ tags: [latex, vscode]
 
 前面两个红线画出的位置填写下一步安装的PDF所在的路径，后面两个记得改成你vscode所在的安装路径。
 
-<a class="post-image" href="{{site.url}}/images/2023-10-12-latex-on-vscode/9.png">
-<img itemprop="image" data-src="{{site.url}}/images/2023-10-12-latex-on-vscode/9.png" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
+<a class="post-image" href="{{site.url}}/images/2023-10-12-latex-on-vscode/9.jpg">
+<img itemprop="image" data-src="{{site.url}}/images/2023-10-12-latex-on-vscode/9.jpg" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
 </a>
 
 # SumatraPDF下载、安装、配置
@@ -243,18 +243,18 @@ tags: [latex, vscode]
 
 
 2. 记得在这里改成你的安装路径。
-<a class="post-image" href="{{site.url}}/images/2023-10-12-latex-on-vscode/9.png">
-<img itemprop="image" data-src="{{site.url}}/images/2023-10-12-latex-on-vscode/9.png" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
+<a class="post-image" href="{{site.url}}/images/2023-10-12-latex-on-vscode/9.jpg">
+<img itemprop="image" data-src="{{site.url}}/images/2023-10-12-latex-on-vscode/9.jpg" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
 </a>
 
 3. 打开SumatraPDF，点击左上角设置，之后点选项
-<a class="post-image" href="{{site.url}}/images/2023-10-12-latex-on-vscode/11.png">
-<img itemprop="image" data-src="{{site.url}}/images/2023-10-12-latex-on-vscode/11.png" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
+<a class="post-image" href="{{site.url}}/images/2023-10-12-latex-on-vscode/11.jpg">
+<img itemprop="image" data-src="{{site.url}}/images/2023-10-12-latex-on-vscode/11.jpg" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
 </a>
 
 4. 然后在红框处输入以下代码, 注意路径改成你的vscode对应的安装路径。
-<a class="post-image" href="{{site.url}}/images/2023-10-12-latex-on-vscode/12.png">
-<img itemprop="image" data-src="{{site.url}}/images/2023-10-12-latex-on-vscode/12.png" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
+<a class="post-image" href="{{site.url}}/images/2023-10-12-latex-on-vscode/12.jpg">
+<img itemprop="image" data-src="{{site.url}}/images/2023-10-12-latex-on-vscode/12.jpg" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
 </a>
 
 ```shell
@@ -266,8 +266,8 @@ tags: [latex, vscode]
 
 1. 为了更方便进行编译，可对其设置快捷键，设置快捷键步骤如下。然后在json文件里添加如下内容。
 
-<a class="post-image" href="{{site.url}}/images/2023-10-12-latex-on-vscode/14.png">
-<img itemprop="image" data-src="{{site.url}}/images/2023-10-12-latex-on-vscode/14.png" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
+<a class="post-image" href="{{site.url}}/images/2023-10-12-latex-on-vscode/14.jpg">
+<img itemprop="image" data-src="{{site.url}}/images/2023-10-12-latex-on-vscode/14.jpg" src="/assets/javascripts/unveil/loader.gif" alt="Kramdown Overview" />
 </a>
 
 <details> 
