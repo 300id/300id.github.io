@@ -1079,7 +1079,7 @@ $$dp[i][j] = dp[i-1][j-1] + dp[i-j][j]$$
         repo: '300id.github.io',
         owner: '300id',
         admin: ['300id'],
-        id:'2021-05-02-how-to-build-a-blog',
+        id:'2023-08-20-part1-scratch',
 
     });
     gitalk.render('gitalk-container');

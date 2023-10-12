@@ -707,6 +707,99 @@ STL unique了解一下
     {% endhighlight %}
 </details>
 
+### P1024 一元三次方程求解
+恶心
+<details> 
+    <summary>展开代码</summary>
+    {% highlight cpp %}
+    #include <bits/stdc++.h>
+    #define endl '\n'
+    #define ll long long
+    #define PB push_back
+    #define POP pop_back
+    #define lowbit(i) (i&(-i))
+    #define INF 0x3f3f3f3f
+    using namespace std;
+    const int maxn = 5e5 + 10;
+    const int mod = 1e9 + 7;
+    const double eps = 1e-5;
+    double a, b, c, d;
+    double f(double x){
+        return a*x*x*x + b*x*x + c*x + d;
+    }
+    int main(){
+        cin >> a >> b >> c >> d;
+        for(int i = -100 ; i < 100 ; ++ i){
+            // cout << i << ' ' << f(i) << ' ' << f(i+1) << endl;
+            if(f(i) == 0) printf("%.2lf ", 1.0*i);
+            if(f(i)*f(i+1) < 0){
+                double l = i, r = i + 1, mid = (l + r) / 2;
+                while(r-l > eps){
+                    mid = (l + r) / 2;
+                    if(f(mid)*f(r)<=0) l = mid;
+                    else r = mid;
+                }
+                printf("%.2lf ", r);
+            }
+        }
+        system("pause");
+        return 0;
+    }
+    {% endhighlight %}
+</details>
+
+### P2678 跳石头
+经典二分答案
+<details> 
+    <summary>展开代码</summary>
+    {% highlight cpp %}
+    #include <bits/stdc++.h>
+    #define endl '\n'
+    #define ll long long
+    #define PB push_back
+    #define POP pop_back
+    #define lowbit(i) (i&(-i))
+    #define INF 0x3f3f3f3f
+    using namespace std;
+    const int maxn = 5e5 + 10;
+    const int mod = 1e9 + 7;
+    const double eps = 1e-5;
+    int N, n, m;
+    int a[maxn];
+    int check(int x){
+        int sum = 0;
+        int s = 0;
+        while(s <= n+1){
+            int t = lower_bound(a + 1, a + 2 + n, a[s] + x) - a;
+            if(t > n + 1){
+                sum += (n+1 - s);
+                break;
+            }
+            sum += (t - s - 1);
+            s = t;
+        }	
+        return sum;
+    }
+    int main(){
+        cin >> N >> n >> m;
+        for(int i = 1 ; i <= n ; ++ i){
+            scanf("%d", &a[i]);
+        }
+        sort(a + 1, a + 1 + n);
+        a[n+1] = N;
+        int l = 1, r = N, mid;
+        while(l <= r){
+            mid = (l + r) >> 1;
+            if(check(mid) <= m) l = mid + 1;
+            else r = mid - 1;
+        }
+        cout << r << endl;
+        system("pause");
+        return 0;
+    }
+    {% endhighlight %}
+</details>
+
 [^1]: This is a footnote.
 
 [kramdown]: https://kramdown.gettalong.org/

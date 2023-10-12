@@ -141,7 +141,7 @@ tags: [题单]
     |---
     | 题目 | 题解 | 完成 | 备注
     |-|:-|:-:|-:
-    |[P1226 【模板】快速幂||取余运算](https://www.luogu.com.cn/problem/P1226)
+    |[P1226 【模板】快速幂\|\|取余运算](https://www.luogu.com.cn/problem/P1226)
     |[P1010 幂次方](https://www.luogu.com.cn/problem/P1010)
     |[P1429 平面最近点对（加强版）](https://www.luogu.com.cn/problem/P1429)
     |[P3612 [USACO17JAN]Secret Cow Code](https://www.luogu.com.cn/problem/P3612)
